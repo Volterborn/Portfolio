@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alexy Ringard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index_en.html" class="active">Home</a></li>
+                <li><a href="about_en.html">About</a></li>
+                <li><a href="projects_en.html">Projects</a></li>
+                <li><a href="contact_en.html">Contact</a></li>
+            </ul>
+            <div class="header-buttons">
+                <button id="toggle-theme">Dark theme</button>
+                <button id="toggle-lang">FR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="presentation">
+            <div class="about">
+                <h1>Welcome to my Portfolio</h1>
+                <p>My name is Alexy Ringard, I am a 2nd-year Computer Science student.</p>
+                <p>On this site, you will find my projects completed in class or independently. If you have any questions, please fill out the contact form or send me an email.</p> 
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="section-title">
+                <h1>Featured Projects</h1>
+                <p>Here are some of my recent achievements</p>
+            </section>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/LogoUNO.png" alt="UNO Game">
+                    </div>
+                    <div class="project-content">
+                        <h3>UNO</h3>
+                        <p>Card game using JavaFX for a smooth interface.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Volterborn/UNO" target="_blank" class="btn-small btn-code">View code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/O-de-France.png" alt="O-De-France">
+                    </div>
+                    <div class="project-content">
+                        <h3>O-De-France</h3>
+                        <p>Stock and order management for a water distribution company.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JUnit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Volterborn/O-De-France" target="_blank" class="btn-small btn-code">View code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/LensManga.png" alt="LensManga">
+                    </div>
+                    <div class="project-content">
+                        <h3>LensManga</h3>
+                        <p>Complete event website for a local convention.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Volterborn/LensManga" target="_blank" class="btn-small btn-code">View code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="projects_en.html" class="btn-cv">View all my projects</a>
+            </div>
+
+            <hr style="margin: 4rem 0; border: 0; border-top: 1px solid #ddd;">
+
+            <section class="section-title">
+                <h1>Contact Me</h1>
+                <p>An opportunity or a question? Send me a message!</p>
+            </section>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>ringardalexy@gmail.com</p>
+                        <a href="mailto:ringardalexy@gmail.com">Write to me</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/alexy-ringard" target="_blank">View my profile</a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2025 Alexy Ringard. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

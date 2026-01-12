@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alexy Ringard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class ="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class ="header-buttons">
+                <button id="toggle-theme">Thème sombre</button>
+                <button id="toggle-lang">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="presentation">
+            <div class ="about">
+                <h1>Bienvenue sur mon Portfolio</h1>
+                <p>Je m'appelle Alexy Ringard, je suis étudiant en 2ème année de BUT Informatique.</p>
+                <p>Sur ce site, vous trouverez mes projets réalisés en cours ou en autonomie. Si vous souhaitez me poser une question, veuillez remplir le formulaire de contact ou envoyez moi un mail.</p> 
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="section-title reveal">
+                <h1>Projets à la une</h1>
+                <p>Voici quelques-unes de mes réalisations récentes</p>
+            </section>
+
+            <div class="projects-grid reveal">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/LogoUNO.png" alt="Jeu UNO">
+                    </div>
+                    <div class="project-content">
+                        <h3>UNO</h3>
+                        <p>Jeu de cartes utilisant JavaFX pour une interface fluide.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaFX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Volterborn/UNO" target="_blank" class="btn-small btn-code">Voir le code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/O-de-France.png" alt="O-De-France">
+                    </div>
+                    <div class="project-content">
+                        <h3>O-De-France</h3>
+                        <p>Gestion de stocks et commandes pour une entreprise de distribution d'eau.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JUnit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Volterborn/O-De-France" target="_blank" class="btn-small btn-code">Voir le code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/LensManga.png" alt="LensManga">
+                    </div>
+                    <div class="project-content">
+                        <h3>LensManga</h3>
+                        <p>Site web événementiel complet pour une convention locale.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Volterborn/LensManga" target="_blank" class="btn-small btn-code">Voir le code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="projects.html" class="btn-cv">Voir tous mes projets</a>
+            </div>
+
+            <hr style="margin: 4rem 0; border: 0; border-top: 1px solid #ddd;">
+
+            <section class="section-title">
+                <h1>Me contacter</h1>
+                <p>Une opportunité ou une question ? Envoyez-moi un message !</p>
+            </section>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>ringardalexy@gmail.com</p>
+                        <a href="mailto:ringardalexy@gmail.com">M'écrire</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/alexy-ringard" target="_blank">Voir mon profil</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alexy Ringard. Tous droits réservés.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Alexy Ringard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="about_en.html">About</a></li>
+                <li><a href="projects_en.html">Projects</a></li>
+                <li><a href="contact_en.html" class="active">Contact</a></li>
+            </ul>
+            <div class="header-buttons">
+                <button id="toggle-theme">Dark theme</button>
+                <button id="toggle-lang">FR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-title">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out for collaborations or questions</p>
+        </section>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>ringardalexy@gmail.com</p>
+                    <a href="mailto:ringardalexy@gmail.com">Write to me</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p></p>
+                    <a href="https://www.linkedin.com/in/alexy-ringard" target="_blank">View profile</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p>My open source projects</p>
+                    <a href="https://github.com/Volterborn" target="_blank">View profile</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>CV</h3>
+                    <p>View or download my CV in PDF format</p>
+                    <div class="cv-buttons">
+                        <a href="fichiers/CV_Alexy_Ringard_en.pdf" target="_blank" class="btn-cv btn-view">View CV</a>
+                        <a href="fichiers/CV_Alexy_Ringard_en.pdf" download class="btn-cv btn-download">Download</a>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <h2>Send a message</h2>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose a subject</option>
+                        <option value="alternance">Work-study</option>
+                        <option value="stage">Internship</option>
+                        <option value="autre">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alexy Ringard. All rights reserved.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

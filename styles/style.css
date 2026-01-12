@@ -1,0 +1,976 @@
+/*
+|--------------------------------------------------------------------------
+| NOUVEAU CSS : ÉLÉGANT & CLASSIQUE (BLEU & BLANC)
+|--------------------------------------------------------------------------
+| Polices : Lora (Titres, Serif élégante) et Open Sans (Corps, Sans-serif pro)
+*/
+
+/* --- 1. Reset et Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Palette Élégante */
+    --primary: #0047AB;    /* Bleu Cobalt/Royale, Profond et Classique */
+    --secondary: #001F5C;  /* Bleu Marine très foncé pour les accents */
+    --accent: #FFD700;     /* Touche d'Or pour l'élégance (non-utilisée par défaut) */
+    --text-dark: #333333;  /* Noir doux */
+    --text-light: #555555; /* Gris pour le texte secondaire */
+    --bg-light: #F9F9F9;   /* Fond très clair */
+    --white: #ffffff;
+    
+    /* Typographie */
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Open Sans', sans-serif;
+    
+    /* Ombres subtiles pour un look "fait main" */
+    --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    color: var(--secondary);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* --- 2. Navigation & Header --- */
+header {
+    background: var(--white);
+    box-shadow: var(--shadow-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.nav-links a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    font-weight: 700;
+}
+
+/* Boutons thème/langue */
+.header-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.header-buttons button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    border: 1px solid var(--text-dark);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: var(--text-dark);
+}
+
+.header-buttons button:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* --- 3. Structure Générale --- */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Accueil - Présentation */
+#presentation {
+    background: linear-gradient(135deg, var(--bg-light), var(--white));
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.about p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0.5rem auto;
+    font-family: var(--font-serif);
+    color: var(--text-dark);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.section-title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+    padding-bottom: 0.2em;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* Cards communes */
+.card {
+    background: var(--white);
+    padding: 3.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-subtle);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3rem; 
+    border-left: 5px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* --- 4. PAGE À PROPOS --- */
+
+.about-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.about-photo {
+    flex: 0 0 250px;
+    text-align: center;
+}
+
+.about-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px var(--bg-light), var(--shadow-hover);
+    border: 3px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.about-photo img:hover {
+    transform: scale(1.03);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin: 3rem 0 1.5rem 0;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.skill {
+    background: var(--bg-light);
+    color: var(--primary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid var(--primary);
+    transition: background-color 0.3s ease;
+}
+
+.skill:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Éducation */
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.edu-item {
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+}
+
+.edu-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-dark);
+}
+
+.edu-item p {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Boutons CV */
+.cv-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; 
+}
+
+.btn-cv {
+    display: inline-block; 
+    flex-shrink: 0; 
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem; 
+    transition: all 0.3s ease;
+    
+    /* STYLE OUTLINED APPLIQUÉ AUX DEUX BOUTONS */
+    background: transparent;
+    color: var(--primary); 
+    border: 2px solid var(--primary);
+    box-shadow: none;
+}
+
+.btn-cv:hover {
+    /* Effet de remplissage pour les boutons OUTLINED */
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 71, 171, 0.3);
+}
+
+/*
+|--------------------------------------------------------------------------
+| NOUVEAU CSS: LOISIRS (Hobbies)
+|--------------------------------------------------------------------------
+*/
+
+.hobbies-grid {
+    display: grid;
+    /* Crée une grille de 3 colonnes sur grand écran */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem; /* Espace avant la section suivante ou le footer */
+}
+
+.hobby-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-subtle);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ligne de couleur primaire en haut pour l'effet stylé */
+    border-top: 5px solid var(--primary); 
+    height: 100%; /* Assure que toutes les cartes ont la même hauteur */
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.hobby-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--primary); /* Utilisation de la couleur primaire pour l'icône */
+    line-height: 1;
+}
+
+.hobby-card h4 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.hobby-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* --- 5. PAGE PROJETS --- */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-subtle);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* NOUVEAU STYLE: Pour afficher les images de projet */
+.project-image {
+    height: 160px;
+    /* Laisser le gradient en arrière-plan au cas où l'image ne charge pas */
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    overflow: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre tout l'espace sans déformation */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05); /* Petit effet de zoom au survol de la carte */
+}
+
+.project-content {
+    padding: 2.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.6rem; 
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Tags de technologies */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: var(--bg-light);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--primary);
+    transition: background-color 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.btn-small {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    /* FIX: Rétablit l'affichage du bouton GitHub */
+    display: inline-block; 
+}
+
+.btn-code, .btn-details {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer; /* Ajoute la main pour le bouton Détails */
+    transition: all 0.3s ease;
+}
+
+.btn-code:hover, .btn-details:hover {
+    background: var(--primary);
+    color: var(--white);
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px); /* Petit saut vers le haut */
+    box-shadow: 0 4px 10px rgba(0, 71, 171, 0.3);
+}
+
+/* --- 6. PAGE CONTACT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-subtle);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-item h3 {
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.contact-item p {
+    color: var(--text-light);
+}
+
+.contact-item a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    display: block; 
+    margin-top: 0.5rem;
+}
+
+.contact-item a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 71, 171, 0.2);
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 71, 171, 0.3);
+}
+
+.btn-submit:hover {
+    background: var(--secondary);
+    box-shadow: 0 6px 15px rgba(0, 31, 92, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- 7. Footer --- */
+footer {
+    background: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* |--------------------------------------------------------------------------
+| 8. Thème sombre (Couleurs améliorées pour un meilleur contraste) 
+|--------------------------------------------------------------------------
+*/
+body.dark-theme {
+    /* COULEURS DARK THEME RÉVISÉES */
+    --bg-light: #121212;    /* Fond très sombre */
+    --white: #1E1E1E;       /* Fond des cartes et éléments */
+    --text-dark: #E0E0E0;   /* Texte principal (très clair) */
+    --text-light: #A0A0A0;  /* Texte secondaire (gris moyen) */
+    --primary: #8AB4F8;     /* Bleu clair vibrant pour accents/liens */
+    --secondary: #F8F8F8;   /* Presque blanc pour les titres */
+    --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme header {
+    background: var(--bg-light);
+    box-shadow: var(--shadow-hover);
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4 {
+    color: var(--secondary); /* Titres en presque blanc */
+}
+
+body.dark-theme .nav-links a {
+    color: var(--text-dark);
+}
+
+body.dark-theme .nav-links a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+body.dark-theme .header-buttons button {
+    border: 1px solid var(--text-light);
+    color: var(--text-dark);
+    background: transparent;
+}
+
+body.dark-theme .card {
+    background: var(--white); 
+    border-left-color: var(--primary);
+}
+
+body.dark-theme .skill {
+    background: var(--white);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+body.dark-theme .skill:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+body.dark-theme .project-image {
+    /* Garde le dégradé sombre en dark-theme pour l'arrière-plan */
+    background: linear-gradient(135deg, #1f4287, #152A50); 
+}
+
+body.dark-theme .tech-tag {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--text-light);
+}
+
+body.dark-theme .contact-form,
+body.dark-theme .contact-item {
+    background: var(--white);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Correction des champs de formulaire en mode sombre */
+body.dark-theme .form-group input,
+body.dark-theme .form-group select,
+body.dark-theme .form-group textarea {
+    background: var(--bg-light); /* Fond des champs sombre */
+    color: var(--text-dark); /* Texte des champs clair */
+    border-color: var(--text-light);
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group select:focus,
+body.dark-theme .form-group textarea:focus {
+    box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.4); 
+}
+
+/* Styles Outlined pour les boutons CV et GitHub en Dark Theme */
+body.dark-theme .btn-cv,
+body.dark-theme .btn-code,
+body.dark-theme .btn-details {
+    color: var(--primary); 
+    border-color: var(--primary);
+    background: transparent;
+}
+
+body.dark-theme .btn-cv:hover,
+body.dark-theme .btn-code:hover,
+body.dark-theme .btn-details:hover {
+    background: var(--primary);
+    color: var(--bg-light); 
+}
+
+/* Correction du Footer en mode sombre pour éviter le texte blanc */
+body.dark-theme footer {
+    background: var(--white); 
+    color: var(--text-light);
+}
+
+/* NOUVEAU: Styles pour la section Loisirs en Dark Theme */
+body.dark-theme .hobby-card {
+    background: var(--white); /* Utilise la variable dark-theme white (#1E1E1E) */
+    border-top-color: var(--primary); /* Utilise la variable dark-theme primary (#8AB4F8) */
+    box-shadow: var(--shadow-hover);
+}
+
+body.dark-theme .hobby-card:hover {
+    transform: translateY(-5px);
+    /* Utilise une ombre plus visible en dark theme */
+    box-shadow: 0 10px 30px rgba(138, 180, 248, 0.4); 
+}
+
+body.dark-theme .hobby-icon {
+    color: var(--primary);
+}
+
+body.dark-theme .hobby-card h4 {
+    color: var(--secondary); /* Titre en presque blanc */
+}
+
+body.dark-theme .hobby-card p {
+    color: var(--text-dark); /* Texte principal clair */
+}
+/* --- 9. Responsive & Ajustements --- */
+
+/* Empêche le défilement horizontal indésirable */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* 1. ORDINATEURS (Grands écrans) */
+@media (min-width: 1024px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Force l'affichage sur 3 colonnes */
+        gap: 2rem;
+    }
+}
+
+/* 2. TABLETTES (Écrans moyens) */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour éviter que ce soit trop serré */
+    }
+}
+
+/* 3. MOBILES (Moins de 768px) */
+@media (max-width: 768px) {
+    /* Menu de navigation adapté */
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .header-buttons {
+        margin-top: 0.5rem;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Grille de projets sur 1 seule colonne */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajustements de textes et marges */
+    .section-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 4. TRÈS PETITS MOBILES */
+@media (max-width: 480px) {
+    .cv-buttons {
+        flex-direction: column;
+    }
+
+    .btn-cv, .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- 10. ANIMATIONS STYLÉES --- */
+
+/* Animation d'entrée pour le texte de bienvenue (chargement de la page) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* On applique l'animation au titre et au texte d'accueil */
+.about h1 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about p {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.3s forwards; /* Petit délai pour un effet décalé */
+}
+
+/* --- Classes pour l'apparition au défilement (Scroll Reveal) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet de lévitation douce pour les cartes de projets au survol */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.project-card:hover {
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 15px 35px rgba(0, 71, 171, 0.2);
+}
+/* --- STYLE DE LA MODALE --- */
+
+/* Arrière-plan de la modale (couvre tout l'écran) */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 2000; /* Toujours au-dessus du reste */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fond noir transparent */
+    backdrop-filter: blur(5px); /* Flou léger sur l'arrière-plan */
+    overflow-y: auto; /* Permet de scroller si le texte est long */
+}
+
+/* Boîte de contenu blanche */
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto; /* 5% du haut, centré horizontalement */
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.3s ease-out; /* Petite animation à l'ouverture */
+}
+
+/* Animation d'apparition */
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* Bouton pour fermer (X) */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #ff4757; /* Change de couleur au survol */
+}
+
+/* Image du projet dans la modale */
+#modal-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover; /* Garde les bonnes proportions */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+/* Titre et description */
+#modal-title {
+    margin-top: 0;
+    color: #2d3436;
+    font-size: 1.8rem;
+}
+
+#modal-description {
+    line-height: 1.6;
+    color: #636e72;
+    margin-top: 15px;
+}
+
+/* Ajustement pour les tags de tech dans la modale */
+#modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+/* --- MODALE EN MODE SOMBRE --- */
+body.dark-theme .modal-content {
+    background-color: #1e272e;
+    color: #f1f2f6;
+}
+
+body.dark-theme #modal-title {
+    color: #ffffff;
+}
+
+body.dark-theme #modal-description {
+    color: #ced6e0;
+}
+
+body.dark-theme .close-btn {
+    color: #f1f2f6;
+}
+
+body.dark-theme #modal-img {
+    border-color: #3d3d3d;
+}
