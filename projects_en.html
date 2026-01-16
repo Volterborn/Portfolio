@@ -23,13 +23,20 @@
     </header>
 
     <main class="container">
-        <section class="section-title">
+        <section class="section-title reveal">
             <h1>My Projects</h1>
             <p>Discover my achievements in computer development</p>
         </section>
+
+        <div class="filter-container reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="univ">University</button>
+            <button class="filter-btn" data-filter="perso">Personal</button>
+        </div>
+
         
-        <div class="projects-grid">
-            <div class="project-card">
+        <div class="projects-grid reveal">
+            <div class="project-card" data-category="perso">
                 <div class="project-image"><img src="images/LogoUNO.png" alt="UNO"></div>
                 <div class="project-content">
                     <h3>UNO</h3>
@@ -42,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="perso">
                 <div class="project-image"><img src="images/Puissance4.png" alt="Connect 4"></div>
                 <div class="project-content">
                     <h3>Connect 4</h3>
@@ -55,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/O-de-France.png" alt="O-De-France"></div>
                 <div class="project-content">
                     <h3>O-De-France</h3>
@@ -68,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="perso">
                 <div class="project-image"><img src="images/Mini-jeux.png" alt="Mini-games"></div>
                 <div class="project-content">
                     <h3>Mini-games</h3>
@@ -81,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="perso">
                 <div class="project-image"><img src="images/conv-pdf.png" alt="PDF"></div>
                 <div class="project-content">
                     <h3>PDF Converter</h3>
@@ -94,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/LensSymphony.png" alt="LenSymphony"></div>
                 <div class="project-content">
                     <h3>LenSymphony</h3>
@@ -107,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/LensWeb.png" alt="Web"></div>
                 <div class="project-content">
                     <h3>LenSymphony-Web</h3>
@@ -120,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/LensManga.png" alt="Manga"></div>
                 <div class="project-content">
                     <h3>LensManga</h3>
@@ -133,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/Pacman.jpg" alt="PacMan"></div>
                 <div class="project-content">
                     <h3>PacMan</h3>
@@ -146,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/Cocktail.jpg" alt="Cocktail"></div>
                 <div class="project-content">
                     <h3>Liquipedia</h3>
@@ -159,7 +166,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="univ">
                 <div class="project-image"><img src="images/latebox.png" alt="LateBox"></div>
                 <div class="project-content">
                     <h3>LateBox</h3>
@@ -172,7 +179,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-category="perso">
                 <div class="project-image"><img src="images/todolist.jpg" alt="To-do"></div>
                 <div class="project-content">
                     <h3>To-do List</h3>

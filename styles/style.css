@@ -238,17 +238,31 @@ nav {
 .skill {
     background: var(--bg-light);
     color: var(--primary);
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 5px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
     font-weight: 600;
     border: 1px solid var(--primary);
     transition: background-color 0.3s ease;
 }
 
+.skill img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 .skill:hover {
     background: var(--primary);
     color: var(--white);
+    transform: translateY(-2px);
+}
+
+.skill:hover img {
+    filter: brightness(0) invert(1);
 }
 
 /* Éducation */
@@ -850,6 +864,38 @@ html, body {
     animation: fadeInUp 0.8s ease-out 0.3s forwards; /* Petit délai pour un effet décalé */
 }
 
+/* --- POP-UP NOTIFICATION --- */
+.notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary); /* Ton bleu principal */
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    z-index: 1000;
+    
+    /* État caché par défaut */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease-out;
+}
+
+/* Classe ajoutée en JS pour afficher le pop-up */
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Style pour l'erreur (optionnel) */
+.notification.error {
+    background-color: #ff4757; /* Rouge */
+}
+
 /* --- Classes pour l'apparition au défilement (Scroll Reveal) --- */
 .reveal {
     opacity: 0;
@@ -931,6 +977,48 @@ html, body {
     border-radius: 10px;
     margin-bottom: 20px;
     border: 1px solid #eee;
+}
+
+/* --- FILTRES PROJETS --- */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 50px; /* Forme pilule plus moderne */
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 71, 171, 0.3);
+}
+
+/* Adaptation Mode Sombre */
+body.dark-theme .filter-btn {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+body.dark-theme .filter-btn:hover,
+body.dark-theme .filter-btn.active {
+    background: var(--primary);
+    color: var(--bg-light); /* Texte foncé sur fond bleu clair */
 }
 
 /* Titre et description */
